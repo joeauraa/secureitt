@@ -81,5 +81,5 @@ MIT-style — use, modify, and redistribute freely.
 
 ## Author
 
-Yousef Magdy Hassan — Python Developer & Security Enthusiast  
+secureitt BY Yousef Magdy 2026  
 GitHub: https://github.com/joeauraa
