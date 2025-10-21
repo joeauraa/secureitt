@@ -1,4 +1,4 @@
-# SecureIt-Py — Password Generator & Breach Checker
+# Secureitt — Password Generator & Breach Checker
 
 **SecureIt-Py** is a lightweight Python CLI tool that helps you:
 - Generate strong random passwords.
@@ -24,7 +24,7 @@
 
 ### Install
 ```bash
-git clone https://github.com/<USERNAME>/SecureIt-Py.git
+https://github.com/joeauraa/secureitt.git
 cd SecureIt-Py
 ```
 
@@ -35,7 +35,7 @@ python password_tool.py
 
 You'll see an interactive menu:
 ```
-Password Tool — Generator & Strength Checker
+secureitt — Generator & Strength Checker
 Menu:
   1) Generate Password
   2) Check Password Strength
