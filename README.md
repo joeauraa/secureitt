@@ -81,5 +81,5 @@ MIT-style — use, modify, and redistribute freely.
 
 ## Author
 
-secureitt BY Yousef Magdy 2026  
-GitHub: https://github.com/joeauraa
+secureitt BY Yousef Magdy /@joeauraa 2026
+
