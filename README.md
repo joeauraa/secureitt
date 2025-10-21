@@ -81,5 +81,5 @@ MIT-style — use, modify, and redistribute freely.
 
 ## Author
 
-secureitt BY Yousef Magdy /@joeauraa 2026
+secureiTt BY Yousef Magdy /@joeauraa 2026
 
