@@ -1,75 +1,85 @@
-🔐 SecureIt-Py — Password Generator & Breach Checker
+# SecureIt-Py — Password Generator & Breach Checker
 
-SecureIt-Py is a lightweight yet powerful Python tool that can:
+**SecureIt-Py** is a lightweight Python CLI tool that helps you:
+- Generate strong random passwords.
+- Evaluate password strength locally.
+- (Optional) Check whether a password has appeared in known data breaches using HaveIBeenPwned k-Anonymity (not enabled by default).
 
-Generate strong random passwords
+---
 
-Check if a password has been leaked in data breaches
+## Features
 
-Evaluate password strength
+- 🔒 Secure random generation using Python standard library.
+- 🧠 Local strength evaluation with clear scoring and recommendations.
+- ⚠️ Strong warnings for weak passwords that advise: **DO NOT USE**.
+- 🚫 No external calls by default — privacy-preserving.
+- ✅ Single-file distribution for easy deployment.
 
-Protect your privacy using k-Anonymity
+---
 
-🚀 Features
+## Quick Start
 
-✅ Secure Random Generation using Python’s secrets module
-✅ Password Strength Evaluation — checks for length, complexity & diversity
-✅ Breach Check via HaveIBeenPwned API
+### Requirements
+- Python 3.8 or newer
 
-✅ k-Anonymity Protection — only partial SHA-1 hash is sent to the API
-✅ Fast CLI Interface — works directly from your terminal
+### Install
+```bash
+git clone https://github.com/<USERNAME>/SecureIt-Py.git
+cd SecureIt-Py
+```
 
-⚙️ Tech Stack
+### Run
+```bash
+python password_tool.py
+```
 
-Language: Python 3.x
+You'll see an interactive menu:
+```
+Password Tool — Generator & Strength Checker
+Menu:
+  1) Generate Password
+  2) Check Password Strength
+  3) Print README
+  4) Exit
+```
 
-Libraries: requests, hashlib, secrets, string
+---
 
-🧠 How It Works
+## How Strength Is Evaluated
 
-The tool generates a password using cryptographically secure randomness.
+The tool assigns up to 5 points:
+- Length >= 12 -> 1 point
+- Uppercase + lowercase -> 1 point
+- Digits -> 1 point
+- Symbols -> 1 point
+- (Implicit) composition -> counts toward overall score
 
-When checking, it hashes the password with SHA-1.
+Score interpretation:
+- 5 -> Very Strong
+- 4 -> Strong
+- 3 -> Fair
+- 0-2 -> Weak (explicit DO NOT USE warning)
 
-Only the first 5 characters of the hash are sent to the API.
+---
 
-The API returns a list of matching suffixes.
+## Optional: Add Breach Check (HaveIBeenPwned)
 
-The tool checks locally if your password’s hash appears in that list.
+If you want to enable breach checking, add a function that:
+- Computes SHA-1 of the password,
+- Sends the first 5 chars of the hash to HIBP range API,
+- Parses results locally to determine occurrence count.
 
-If found → ⚠️ “This password has been leaked — DO NOT USE IT!”
+Be careful with network calls and follow HIBP usage guidelines.
 
-If not found but weak → ⚠️ “This password wasn’t found but is still weak — avoid using it.”
+---
 
-If strong → ✅ “Password is safe and strong.”
+## License
 
-💻 Usage
-🔸 Install dependencies
-pip install requests
+MIT-style — use, modify, and redistribute freely.
 
-🔸 Run the script
-python secureit.py
+---
 
-🔸 Example output
-Generated Password: X@9zK!t7QeR2
-Strength: Very Strong 💪
-Checking breaches...
-⚠️ Warning: This password has appeared 10 times in known breaches. DO NOT USE IT!
+## Author
 
-🧩 Code Structure
-secureit.py
-│
-├── generate_password()   # Generates secure random password
-├── evaluate_strength()   # Analyzes password complexity
-├── check_pwned()         # Checks HaveIBeenPwned API
-└── main()                # CLI interface
-
-🔒 Privacy Note
-
-Your password is never sent to any server.
-Only the first 5 characters of its SHA-1 hash are used for lookup, ensuring complete anonymity.
-
-👨‍💻 Author
-
-Yousef Magdy Hassan
-GitHub: @joeauraa
+Yousef Magdy Hassan — Python Developer & Security Enthusiast  
+GitHub: https://github.com/joeauraa
