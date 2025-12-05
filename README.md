@@ -78,5 +78,6 @@ Be careful with network calls and follow HIBP usage guidelines.
 
 ## Author
 
-secureiTt BY Yousef Magdy /@joeauraa 2026
+© 2025 secureiTt. All rights reserved.
+Developer: Yousef Magdy — @joeauraa
 
