@@ -73,9 +73,6 @@ Be careful with network calls and follow HIBP usage guidelines.
 
 ---
 
-## License
-
-MIT-style — use, modify, and redistribute freely.
 
 ---
 
